@@ -205,7 +205,7 @@ class MPEFile
         $dir = pathinfo($path, PATHINFO_DIRNAME);
 
         if(!is_dir($dir))
-            mkdir($dir, 0644, true);
+            mkdir($dir, 0700, true);
 
         return file_put_contents($path, $this->data);
     }
